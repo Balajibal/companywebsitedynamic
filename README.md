@@ -138,17 +138,15 @@ Publish the website in the given URL.
 
 
 ## OUTPUT:
-![output](./static/img/dhoni.jpg)
+![output](./static/img/i1.png)
 
-![output](./static/img/kholi.jpg)
+![output](./static/img/i2.png)
 
-![output](./static/img/kl rahul.jpg)
+![output](./static/img/i3.png)
 
-![output](./static/img/pant.jpg)
+![output](./static/img/i4.png)
 
-![output](./static/img/raina.jpg)
-
-![output](./static/img/abd.jpg)
+![output](./static/img/i5.png)
 
 
 

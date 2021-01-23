@@ -3,8 +3,8 @@
       font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: brown;
-    color:  brown;
+    background-color: indianred;
+    color:  indianred;
 }
 .container{
     width: 1080px;
@@ -21,11 +21,11 @@ body{
     height: 250px;
     text-align: center;
     font-size: xx-large;
-    background-image : url("/static/img/y1.jpeg");
+    background-image : url("/static/img/titleicon.jfif");
     background-size:cover;
     margin: 0px 0px 0px 0px;
     padding-top: 150px;
-    color: #29FDFF;
+    color: black;
 }
 
 .menu{
