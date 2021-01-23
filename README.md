@@ -23,9 +23,136 @@ Retrieve data from database and display it in a dynamic webpage.
 Publish the website in the given URL.
 
 ## PROGRAM:
+### base.html
+```
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Silicon Private Limited</title>
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel = "icon" href ="{% static 'img/titleicon.jfif' %}" type = "image/x-icon"> 
+              
+</head>
+
+<body>
+    <div class="container">
+    <div class="banner">
+        BALA MOBILES.
+    </div>
+    <div class="menu">
+        <div class="menuitem"><a href="/home">Home</a></div> 
+        <div class="menuitem"><a href="/products">Products</a></div> 
+        <div class="menuitem"><a href="/people">People</a></div>
+        <div class="menuitem"><a href="/contact">Contact Us</a></div> 
+    </div><div class="content">
+    {% block content %}    
+    {% endblock  %}
+    </div>
+    <div class="footer">
+        BUY MOBILES,
+        WITH JOY.
+        only @ bala mobiles
+    </div>
+    </div>
+</body>
+</html>
+
+```
+
+### people.html
+```
+{% extends "companyapp/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PEOPLE LIST</title>
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <h1>OUR PEOPLES</h1>
+        <div class="content">
+            <div class="peoplelist">
+                {% for people in peoples %}
+                <div class="people">
+                    <div class="peoplelist">
+                        <img src="{{ people.photo.url }}" alt="people image">
+                    </div>
+                    <div class="peoplephoto">{{ photo }}</div>
+                    <div class="peoplename">{{ people.name }}</div>
+                    <div class="peopledesignation">{{ people.designation }}</div>
+                </div>
+                {% endfor %}
+            </div>
+       </div>
+    {% endblock %}
+    </div>
+</body>
+
+</html>
+
+```
+### product.html
+```
+{% extends "companyapp/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PRODUCTS LIST</title>
+    <link rel="stylesheet" href="{% static 'css/people.css' %}">
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <h1>OUR PREMIUM PRODUCTS</h1>
+        <div class="content">
+            <div class="peoplelist">
+                {% for product in products %}
+                <div class="people">
+                    <div class="peoplelist">
+                        <img src="{{ product.photo.url }}" alt="product image">
+                    </div>
+                    <div class="peoplephoto">{{ photo }}</div>
+                    <div class="peoplename">{{ product.name }}</div>
+                    <div class="peopledesignation">{{ product.price }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>
+
+```
 
 
 ## OUTPUT:
+![output](./static/img/dhoni.jpg)
+
+![output](./static/img/kholi.jpg)
+
+![output](./static/img/kl rahul.jpg)
+
+![output](./static/img/pant.jpg)
+
+![output](./static/img/raina.jpg)
+
+![output](./static/img/abd.jpg)
+
+
+
 
 
 ## RESULT:
+Thus a website is designed for the chip manufacturing company and is hosted in the url http://balaji.student.saveetha.in:8000/.
